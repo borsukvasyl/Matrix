@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/my_trans.js"></script>
+</head>
+<body style='background:url(../pic/matrix.png) no-repeat;background-size: 100%;color:white;'>
+    <script>
+    $(document).ready(function(){
+        create_list()
+        $('#matrix_form').html(create_matrix(1))
+        change_matrix_size();
+        
+    })
+    </script>
+    <div style='height:150px;text-align:center;'><br><br><a href='/'><img src='/pic/logo.png'></a></div>
+    <div style='background:rgba(20,40,15,0.4);margin:0px auto;width:450px;'>
+        <h2 align='center'>Creation of transitive closure matrix</h2>
+        <div style='margin:0px auto' align='center'>
+            <form method = 'POST' action="../cgi-bin/transitive.py">
+                Choose matrix size:
+                <select name='size' id ='sel'>
+                
+                </select>
+                <div id ='matrix_form'></div>
+            </form>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

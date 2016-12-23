@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Matrix.com</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/my_multiply.js"></script>
+</head>
+<body style='background:url(../pic/matrix.png) no-repeat;background-size: 100%;color:white;'>
+    <script>
+    $(document).ready(function(){
+        create_list()
+        $('#matrix_form1').html(create_matrix(1, 1))
+        $('#matrix_form2').html(create_matrix(2, 1))
+        $('#matrix_form').html('<input type=\'submit\' value=\'Find\'>')
+        change_matrix_size();
+    })
+    </script>
+    <div style='height:150px;text-align:center;'><br><br><a href='/'><img src='/pic/logo.png'></a></div>
+    <div style='background:rgba(20,40,15,0.4);margin:0px auto;width:650px;'>
+        <h2 align='center'>Multyplying matrixes</h2>
+        <div style='margin:0px auto' align='center'>
+         
+        
+        <form method = 'POST' action="../cgi-bin/multiply.py">
+            Choose matrixes size: 
+            <select name='size' id ='sel1'>
+                                
+            </select>
+            <table width='100%'>
+                <tr align='center' valign='top'>
+                    <td>
+                        
+                        
+                        <div id ='matrix_form1'></div>
+                    </td>
+                    <td>
+                        
+                        
+                        <div id ='matrix_form2'></div>
+                    </td>
+                </tr>
+            </table>
+            <div id ='matrix_form'></div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
